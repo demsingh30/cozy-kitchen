@@ -1,0 +1,41 @@
+<svg viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- soft blob bg -->
+  <ellipse cx="65" cy="65" rx="52" ry="50" fill="#EDE4D8" opacity="0.6"/>
+
+  <!-- mug body -->
+  <rect x="38" y="68" width="36" height="30" rx="5" fill="#F5EFE6" stroke="#C490B8" stroke-width="1.5"/>
+  <!-- mug handle -->
+  <path d="M74 76 Q86 76 86 83 Q86 90 74 90" fill="none" stroke="#C490B8" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- mug liquid -->
+  <rect x="40" y="70" width="32" height="8" rx="3" fill="#88B4C8" opacity="0.4"/>
+  <!-- mug stripe -->
+  <rect x="38" y="82" width="36" height="4" rx="0" fill="#E8A0A8" opacity="0.4"/>
+
+  <!-- steam -->
+  <path d="M48 65 Q45 57 48 50 Q51 43 48 36" fill="none" stroke="#B8A0C8" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M56 63 Q53 55 56 48 Q59 41 56 34" fill="none" stroke="#88B4C8" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M64 65 Q61 57 64 50 Q67 43 64 36" fill="none" stroke="#B8A0C8" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- left plant — trailing vine -->
+  <path d="M28 98 Q20 80 26 65 Q30 55 24 42" fill="none" stroke="#7B9E8A" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="22" cy="58" rx="7" ry="5" fill="#A8C4A8" transform="rotate(-30 22 58)"/>
+  <ellipse cx="18" cy="72" rx="6" ry="4" fill="#7B9E8A" transform="rotate(20 18 72)"/>
+  <ellipse cx="26" cy="45" rx="5" ry="4" fill="#A8C4A8" transform="rotate(-10 26 45)"/>
+
+  <!-- right plant — little potted plant -->
+  <rect x="86" y="88" width="20" height="14" rx="3" fill="#E8A0A8" opacity="0.7"/>
+  <ellipse cx="96" cy="88" rx="10" ry="4" fill="#C490B8" opacity="0.5"/>
+  <line x1="96" y1="84" x2="90" y2="68" stroke="#7B9E8A" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="96" y1="84" x2="96" y2="64" stroke="#7B9E8A" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="96" y1="84" x2="102" y2="70" stroke="#7B9E8A" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="88" cy="65" rx="7" ry="5" fill="#A8C4A8" transform="rotate(-20 88 65)"/>
+  <ellipse cx="96" cy="61" rx="6" ry="5" fill="#7B9E8A"/>
+  <ellipse cx="104" cy="67" rx="7" ry="5" fill="#A8C4A8" transform="rotate(20 104 67)"/>
+
+  <!-- stars -->
+  <text x="14" y="40" font-size="7" opacity="0.5" fill="#B8A0C8">✦</text>
+  <text x="100" y="38" font-size="6" opacity="0.4" fill="#88B4C8">✦</text>
+  <text x="108" y="58" font-size="5" opacity="0.4" fill="#E8A0A8">✦</text>
+
+</svg>

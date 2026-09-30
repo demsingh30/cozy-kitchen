@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>The Cozy Kitchen</title>
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<header id="header">
+ <img id="header-img" src="logo.svg" alt="The Cozy Kitchen Logo">
+ <nav id="nav-bar">
+ <ul>
+ <li> <a href="#Recipes" class="nav-link">Recipes</a></li>
+  <li> <a href="#friends-picks" class="nav-link">Friend's Picks</a></li>
+ <li> <a href="#submit-recipe" class="nav-link">Submit a Recipe</a></li>
+  </ul>
+  </nav>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <p id="hero-p">A collection of my favorite recipes</p>
+    <h1>🌱 The Cozy Kitchen 🌱</h1>
+  <div id="search-bar">
+    <input 
+      type="text" 
+      placeholder="Whatcha cooking?"
+      class="search-input">
+       <button type="button" onclick="document.querySelector('#Recipes').scrollIntoView()">Browse Recipes</button>
+</div>
+</section>
+
+ 
+
+<div class="stamp-divider">
+    <span>✦</span>
+    </div>
+
+
+ <!-- Recipe Card -->
+ <section id="Recipes">
+  <h1>Recipes</h1>
+  <!-- Card 1 -->
+
+<div class="recipe-grid">
+  <article class="recipe-card">
+    <div class="tape"></div>
+<h3>Miso Butter Salmon Rice</h3>
+<img src="salmon.png" alt="Miso Butter Salmon Rice">
+   <div class="tag"> 
+        <span class="tag-asian">Asian</span> 
+        <span class="tag-easy">Easy</span> 
+        <span class="tag-one-pot">One Pot</span> 
+   </div> 
+   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
+   </article>
+ 
+
+
+
+  <!-- Card 2 -->
+
+  <article class="recipe-card">
+<h3>Miso Butter Salmon Rice</h3>
+<img src="salmon.png" alt="Miso Butter Salmon Rice">
+   <div class="tag"> 
+        <span class="tag-asian">Asian</span> 
+        <span class="tag-easy">Easy</span> 
+        <span class="tag-one-pot">One Pot</span> 
+   </div> 
+   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
+  </article>
+ 
+  <!-- Card 3 -->
+
+  <article class="recipe-card">
+<h3>Miso Butter Salmon Rice</h3>
+<img src="salmon.png" alt="Miso Butter Salmon Rice">
+   <div class="tag">
+        <span class="tag-asian">Asian</span> 
+        <span class="tag-easy">Easy</span> 
+        <span class="tag-one-pot">One Pot</span> 
+   </div> 
+   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
+  </article>
+
+</div>
+ </section>
+
+ <!-- Friend's Picks -->
+ <section id="friends-picks">
+  <h1>Friend's Picks</h1>
+  <div class="recipe-grid">
+  <article class="recipe-card">
+<h3>Miso Butter Salmon Rice</h3>
+<img src="salmon.png" alt="Miso Butter Salmon Rice">
+   <div class="tag"> 
+        <span class="tag-asian">Asian</span> 
+        <span class="tag-easy">Easy</span> 
+        <span class="tag-one-pot">One Pot</span> 
+   </div> 
+   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
+  </article>
+  </div>
+ </section>
+
+  <!-- Submit A Recipe  -->
+ <section id="submit-recipe">
+    <h1>Submit a Recipe</h1>
+
+    <!-- Form -->
+  <form>
+<div>
+<label for="title">Recipe Title:</label>
+<input type="text" id="title" name="title">
+</div>
+<div>
+<label for="photo">Submit Your Photo:</label>
+<input type="file" id="photo" name="photo">
+</div>
+<div>
+<label for="link">Submit Your URL:</label>
+<input type="url" id="link" name="link">
+</div>
+
+<div>
+<label for="selection">Cuisine Type:</label>
+<select id="selection" name="selection">
+    <option value="asian">Asian</option>
+    <option value="mexican">Mexican</option>
+    <option value="italian">Italian</option>
+    <option value="american">American</option>
+    <option value="indian">Indian</option>
+</select>
+</div>
+
+<div>
+<label for="tags">Other Tags:</label>
+<select id="tags" name="tags" multiple>
+    <option value="quick">Quick Meals</option>
+    <option value="easy">Easy</option>
+    <option value="airfryer">Airfryer</option>
+    <option value="dessert">Dessert</option>
+    <option value="healthy">Healthy</option>
+    <option value="one-pot">One Pot</option>
+  </select>
+  
+  <input type="submit" value="Submit Recipe">
+  
+  </form>
+
+ </section>
+
+<!--  Footer -->
+ <footer>
+  <p> 🌱 The Cozy Kitchen 🌱</p>
+  <p>&copy; 2026 Recipe Hub. All rights reserved.</p>
+ </footer>
+</body>
+
+</html>
