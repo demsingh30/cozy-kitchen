@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Cozy Kitchen</title>
   </head>
 
@@ -26,12 +27,14 @@
 <section class="hero">
   <p id="hero-p">A collection of my favorite recipes</p>
     <h1>🌱 The Cozy Kitchen 🌱</h1>
+  <div class="search-button">
   <div id="search-bar">
     <input 
       type="text" 
-      placeholder="Whatcha cooking?"
-      class="search-input">
-       <button type="button" onclick="document.querySelector('#Recipes').scrollIntoView()">Browse Recipes</button>
+      placeholder="What's Cooking?"
+      class="search-input"/>
+</div>
+ <button type="button" onclick="document.querySelector('#Recipes').scrollIntoView()">Browse Recipes</button>
 </div>
 </section>
 
@@ -41,56 +44,40 @@
     <span>✦</span>
     </div>
 
+    <span class="tag-asian">Asian</span>
+        <span class="tag-easy">Easy</span>
+        <span class="tag-one-pot">One Pot</span>
 
- <!-- Recipe Card -->
- <section id="Recipes">
+<section id="Recipes">
   <h1>Recipes</h1>
-  <!-- Card 1 -->
 
-<div class="recipe-grid">
-  <article class="recipe-card">
-    <div class="tape"></div>
-<h3>Miso Butter Salmon Rice</h3>
-<img src="salmon.png" alt="Miso Butter Salmon Rice">
-   <div class="tag"> 
-        <span class="tag-asian">Asian</span> 
-        <span class="tag-easy">Easy</span> 
-        <span class="tag-one-pot">One Pot</span> 
-   </div> 
-   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
-   </article>
+  <div class="recipe-grid">
+
+    <!-- Card 1 -->
+    <article class="recipe-card">
+      <div class="tape"></div>
+       <div class="card-image">
+    <img src="salmon.png" alt="Miso Butter Salmon Rice">
+    <button aria-label="Save recipe">♡</button>
+  </div>
+
+      <h3>Miso Butter Salmon Rice</h3>
+      <p>Salty-sweet salmon over buttery miso rice. <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a> </p>
+
+
+      
+      <div class="tag">
+        <span class="timer">30 Min</span>
+      
+      </div>
+
+    </article>
+
+  </div>   <!-- closes the grid -->
+ </section>   <!-- closes Recipes -->
  
 
 
-
-  <!-- Card 2 -->
-
-  <article class="recipe-card">
-<h3>Miso Butter Salmon Rice</h3>
-<img src="salmon.png" alt="Miso Butter Salmon Rice">
-   <div class="tag"> 
-        <span class="tag-asian">Asian</span> 
-        <span class="tag-easy">Easy</span> 
-        <span class="tag-one-pot">One Pot</span> 
-   </div> 
-   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
-  </article>
- 
-  <!-- Card 3 -->
-
-  <article class="recipe-card">
-<h3>Miso Butter Salmon Rice</h3>
-<img src="salmon.png" alt="Miso Butter Salmon Rice">
-   <div class="tag">
-        <span class="tag-asian">Asian</span> 
-        <span class="tag-easy">Easy</span> 
-        <span class="tag-one-pot">One Pot</span> 
-   </div> 
-   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
-  </article>
-
-</div>
- </section>
 
  <!-- Friend's Picks -->
  <section id="friends-picks">
@@ -149,6 +136,7 @@
     <option value="healthy">Healthy</option>
     <option value="one-pot">One Pot</option>
   </select>
+  </div>
   
   <input type="submit" value="Submit Recipe">
   
@@ -159,7 +147,7 @@
 <!--  Footer -->
  <footer>
   <p> 🌱 The Cozy Kitchen 🌱</p>
-  <p>&copy; 2026 Recipe Hub. All rights reserved.</p>
+  <p>&copy;  2026 The Cozy Kitchen. All rights reserved.</p>
  </footer>
 </body>
 
