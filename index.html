@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Cozy Kitchen</title>
@@ -17,7 +17,7 @@
  <ul>
  <li> <a href="#Recipes" class="nav-link">Recipes</a></li>
   <li> <a href="#friends-picks" class="nav-link">Friend's Picks</a></li>
- <li> <a href="#submit-recipe" class="nav-link">Submit a Recipe</a></li>
+ <li> <a href="#submit-recipe" class="nav-button">Submit a Recipe</a></li>
   </ul>
   </nav>
 </header>
@@ -44,11 +44,22 @@
     <span>✦</span>
     </div>
 
-    <span class="tag-asian">Asian</span>
-        <span class="tag-easy">Easy</span>
-        <span class="tag-one-pot">One Pot</span>
 
 <section id="Recipes">
+
+  <!--Tagging System-->
+<section id="tag-pills">
+  <div class="pill-tags">
+    <span class="pill tag-asian">Asian</span>
+    <span class="pill tag-easy">Easy</span>
+    <span class="pill tag-one-pot">One Pot</span>
+    <span class="pill tag-quick">Quick</span>
+    <span class="pill tag-airfryer">Airfryer</span>
+    <span class="pill tag-dessert">Dessert</span>
+    <span class="pill tag-breakfast">Breakfast</span>
+  </div>
+</section>
+
   <h1>Recipes</h1>
 
   <div class="recipe-grid">
@@ -58,7 +69,11 @@
       <div class="tape"></div>
        <div class="card-image">
     <img src="salmon.png" alt="Miso Butter Salmon Rice">
-    <button aria-label="Save recipe">♡</button>
+    <button aria-label="Save recipe">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+    <path d="M12 21s-7-4.5-9.5-9C.6 8.4 2.4 4.5 6.2 4c2-.3 3.9.6 5.1 2.2C12.5 4.6 14.4 3.7 16.4 4c3.8.5 5.6 4.4 3.7 8-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.8"></path>
+  </svg>
+    </button>
   </div>
 
       <h3>Miso Butter Salmon Rice</h3>
@@ -67,7 +82,11 @@
 
       
       <div class="tag">
-        <span class="timer">30 Min</span>
+        <span class="timer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
+  <path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+</svg>30 Min</span>
       
       </div>
 
@@ -80,27 +99,48 @@
 
 
  <!-- Friend's Picks -->
- <section id="friends-picks">
-  <h1>Friend's Picks</h1>
-  <div class="recipe-grid">
-  <article class="recipe-card">
-<h3>Miso Butter Salmon Rice</h3>
-<img src="salmon.png" alt="Miso Butter Salmon Rice">
-   <div class="tag"> 
-        <span class="tag-asian">Asian</span> 
-        <span class="tag-easy">Easy</span> 
-        <span class="tag-one-pot">One Pot</span> 
-   </div> 
-   <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a>
-  </article>
-  </div>
- </section>
+<section id="friends-picks">
+  <h2>Friends' Picks</h2>
+  <p>The ones my people keep coming back for</p>
 
+  <div class="picks-row">
+
+    <div class="pick-card">
+      <div class="pick-circle">P</div>
+      <div class="pick-text">
+        <p>Priya's pick</p>
+        <p>Garden Herb Risotto</p>
+        <p>"Made it three weekends in a row now."</p>
+      </div>
+    </div>
+
+    <div class="pick-card">
+      <div class="pick-circle">J</div>
+      <div class="pick-text">
+        <p>Jordan's pick</p>
+        <p>Brown Butter Chocolate Chip Cookies</p>
+        <p>"The brown butter is non-negotiable now."</p>
+      </div>
+    </div>
+
+    <div class="pick-card">
+      <div class="pick-circle">K</div>
+      <div class="pick-text">
+        <p>Keegan's pick</p>
+        <p>Rustic Tomato Galette</p>
+        <p>"Requests this every time tomatoes are in season."</p>
+      </div>
+    </div>
+
+  </div>
+</section>
   <!-- Submit A Recipe  -->
  <section id="submit-recipe">
-    <h1>Submit a Recipe</h1>
+    <h2>Want To Submit A Recipe?</h2>
+    <button id="open-form">Yes!</button>
 
     <!-- Form -->
+<div id="submit-form" class="hidden">
   <form>
 <div>
 <label for="title">Recipe Title:</label>
@@ -114,6 +154,7 @@
 <label for="link">Submit Your URL:</label>
 <input type="url" id="link" name="link">
 </div>
+
 
 <div>
 <label for="selection">Cuisine Type:</label>
@@ -141,6 +182,7 @@
   <input type="submit" value="Submit Recipe">
   
   </form>
+  </div>
 
  </section>
 

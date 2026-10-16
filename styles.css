@@ -4,6 +4,7 @@
   --terracotta: #8B5A3C;
   --brown: #5C3D2E;
   --sage: #7B9E8A;
+  --sage-tint:#EEF2E5;
   --fern: #A8C4A8;
   --blush: #E8A0A8;
   --rose: #C490B8;
@@ -115,12 +116,13 @@ animation: fadeIn 1.5s ease;
 padding-top: 100px;
 }
 .card-image button {
-  position: absolute;                    
+  position: absolute; 
+  padding: 0;                
   top: 10px;                             
   right: 10px;      
   width: 34px;
   height: 34px;
-  border-radius: 50%;
+  border-radius: 999px;
   border: none;
   background: #fffdf7;
   color: #c2674a;
@@ -130,7 +132,91 @@ padding-top: 100px;
   align-items: center;
   justify-content: center;
 }                     
+
+.timer {
+  font-size: 13px;
+ font-weight: 700;
+ color: #7A6552;
+ display:flex;
+ align-items: center;
+ gap: 5px;
 }
+
+.picks-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.pick-card {
+  width: 380px;
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 1rem;
+  box-shadow: 0 10px 22px -14px rgba(74, 55, 40, 0.25);
+}
+
+.pick-card{
+  position: relative;
+  width: 380px;
+  text-align: left;
+  background: #FBF6EC;           
+  padding: 16px 16px 22px;
+  border-radius: 6px;
+  box-shadow: 0 14px 26px -16px rgba(74, 55, 40, 0.35);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.pick-card:hover {
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: 0 22px 34px -14px rgba(74, 55, 40, 0.35);
+}
+
+.pick-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.pick-card:nth-child(1) .pick-circle { background: #F3E4DC; color: #B85C3E; }
+.pick-card:nth-child(2) .pick-circle { background: #E7EEE0; color: #57694C; }
+.pick-card:nth-child(3) .pick-circle { background: #F7ECD3; color: #B8863A; }
+
+.pick-text p {
+  margin: 0 0 6px;
+}
+
+.pick-text p:nth-child(1) {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+.pick-text p:nth-child(2) {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--brown);
+}
+
+.pick-text p:nth-child(3) {
+  font-size: 13.5px;
+  color: #7A6552;
+}
+
 
 #search-container {
   display: flex;
@@ -213,25 +299,28 @@ border: 2px solid rgba(74, 55, 40, 0.15);
 
 nav ul {
 display: flex;
-gap: 2rem;
+gap: 2.2rem;
 list-style: none;
 margin: 0;
 padding: 0;
 justify-content: right;
+align-items:center;
 }
 
 nav {
   top: 0;
   width: 100%;
+  
+  
 }
 
 nav a {
 color: var(--terracotta);
 text-decoration:none;
-font-size: 2.5rem;
+font-size: 1.6rem;
+font-weight: bold;
 padding: 8px 16px; 
 font-family: 'Nunito', sans-serif;
-font-size: 2rem;
 
 }
 
@@ -240,6 +329,15 @@ nav {
 display: flex; 
 flex-direction: column;
 }
+}
+
+.nav-button {
+background: var(--blush); 
+color: #FFFDF7;
+font-weight: 800;
+font-size: 15px;
+padding: 12px 24px;
+border-radius: 999px;
 }
 
 
@@ -255,6 +353,7 @@ font-size: 1.5rem;
 .recipe-card {
   position: relative;
   width: 380px;
+  text-align: left;
   background: #FBF6EC;           
   padding: 16px 16px 22px;
   border-radius: 6px;
@@ -311,42 +410,10 @@ justify-content:center;
 
 .recipe-card img {
   width: 100%;
-  max-width: 300px;
   height: 200px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
-  object-fit: cover;
 }
-
-
-
-.tag-asian {
-  background-color: var(--tag-asian);
-  color: white;
-  padding: 2px 8px;
-  border-radius: 999px;
-  margin-right: 4px;
-}
-
-.tag-easy {
-  background-color: var(--tag-easy);
-  color: white;
-  padding: 2px 8px;
-  border-radius: 999px;
-  margin-right: 4px;
-}
-
-
-.tag-one-pot {
-  background-color: var(--tag-one-pot);
-  color: white;
-  padding: 2px 8px;
-  border-radius: 999px;
-  margin-right: 4px;
-}
-
-
-
 
 
 
@@ -427,12 +494,13 @@ margin-top: 20px;
 }
 
 
+
 input[type="submit"]:hover {
   color:var(--sage);
 }
 
 #friends-picks {
-  background:var(--duck-egg);
+  background:var(--linen);
 padding: 60px;
 text-align: center;
 font-size: 1.5rem; 
@@ -446,4 +514,50 @@ footer {
   background: var(--brown);
   color: var(--linen);
   padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+.pill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+#tag-pills {
+  margin: 60px;
+}
+
+.pill {
+border-radius: 999px;
+font-weight: 800;
+font-size: 15px;
+padding: 10px 22px;
+
+}
+
+.tag-asian,
+.tag-airfryer {
+  background-color: #F3E4DC;
+  color: #B85C3E;
+}
+
+.tag-easy,
+.tag-healthy {
+  background-color: #E7EEE0;
+  color: #57694C;
+}
+
+.tag-one-pot,
+.tag-breakfast {
+  background-color: #F7ECD3;
+  color: #B8863A;
+}
+
+.tag-quick,
+.tag-dessert {
+  background-color: #F6E1DD;
+  color: #C97B63;
 }
