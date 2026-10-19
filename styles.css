@@ -30,6 +30,7 @@ body {
   background: var(--linen);
   background-image: url('cream-paper.png');
   background-repeat: repeat;
+   margin: 0;
 }
 
 h1, h2, h3 {
@@ -310,8 +311,6 @@ align-items:center;
 nav {
   top: 0;
   width: 100%;
-  
-  
 }
 
 nav a {
@@ -358,7 +357,8 @@ font-size: 1.5rem;
   padding: 16px 16px 22px;
   border-radius: 6px;
   box-shadow: 0 14px 26px -16px rgba(74, 55, 40, 0.35);
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .3s ease;
+  border: 1px solid #E4D9C0;
 }
 
 .recipe-card:hover {
@@ -416,109 +416,6 @@ justify-content:center;
 }
 
 
-
-@media(max-width:850px) {
-  .wave-container::before {    
-    height: 40.5px
-  }  
-}
-
-form {
-  display:flex;
-  flex-direction: column;
-  max-width:440px;
-  margin: 0 auto;
-  justify-content: center;
-  gap: 1rem;
-  
-
-}
-
-#submit-recipe {
-  background:var(--fern);
-  padding: 60px;
-  text-align: center;
-  font-size: 1.5rem;
-
-}
-
-form input {
-  border: 1px solid var(--brown);
-  border-radius: 4px;
-  padding: 8px 12px;
-  width: 100%;
-  
-}
-
-form select {
-  width:100%;
-  padding: 8px 12px;
-  border: 1px solid var(--brown);
-  border-radius: 4px;
-  color: var(--brown);
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  height: 100px;
-}
-
-
-form select:focus, form input:focus {
-  outline: none;
-  border-color: var(--brown);
-}
-
-#selection {
-  height: auto;
-}
-form label {
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  color: var(--brown);
-  font-size: 1rem;
-}
-
-input[type="submit"] {
-background-color: var(--blush);
-color: var(--linen);
-border-radius: 30px;
-border: none;
-width: 200px;
-height: 40px;
-font-size: 1rem;
-align-self: center;
-text-align: center;
-font-family: 'Nunito', sans-serif;
-border-radius: 8px;
-margin-top: 20px;
-}
-
-
-
-input[type="submit"]:hover {
-  color:var(--sage);
-}
-
-#friends-picks {
-  background:var(--linen);
-padding: 60px;
-text-align: center;
-font-size: 1.5rem; 
-
-
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  background: var(--brown);
-  color: var(--linen);
-  padding: 20px;
-}
-
-.hidden {
-  display: none;
-}
 .pill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -531,11 +428,10 @@ footer {
 }
 
 .pill {
-border-radius: 999px;
-font-weight: 800;
-font-size: 15px;
-padding: 10px 22px;
-
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 10px 22px;
 }
 
 .tag-asian,
@@ -560,4 +456,87 @@ padding: 10px 22px;
 .tag-dessert {
   background-color: #F6E1DD;
   color: #C97B63;
+}
+
+.hidden { display: none; }
+
+
+@media only screen and (max-width: 600px) {
+  #Recipes,
+  #friends-picks,
+  #submit-recipe {
+    padding: 20px;
+  }
+
+  #tag-pills {
+    margin: 20px;
+  }
+
+  .recipe-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pick-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  .nav-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 60vh;
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .search-button {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #search-bar {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+  }
+
+  .stamp-divider span {
+    transform: scale(1.5);
+  }
 }
