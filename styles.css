@@ -91,7 +91,8 @@ button a:hover {
 #open-form,
 .search-button button,
 .nav-button {
-  transition: background-color .2s ease;;
+  transition: background-color .2s ease;
+  margin-bottom: 30px;
 }
 
 #open-form:hover,
@@ -340,13 +341,20 @@ font-family: 'Nunito', sans-serif;
 
 
 form {
+  background-color: var(--cream);
+  border-radius: 12px;
   display: flex;
+  padding:30px;
+  box-shadow:  0px 4px 10px 0px rgba(0, 0, 0, 0.15);
   flex-direction: column;
-  max-width: 440px;
+  max-width:500px;
   margin: 0 auto;
   justify-content: center;
-  gap: 1rem;
+  text-align: left;
+  gap: 20px;
 }
+
+
 
 #submit-recipe {
   background: var(--fern);
@@ -356,21 +364,26 @@ form {
 }
 
 form input {
-  border: 1px solid var(--brown);
-  border-radius: 4px;
-  padding: 8px 12px;
+  border: 2px solid var(--brown);
+  background-color: white;
+  border-radius: 8px;
   width: 100%;
+  padding: 10px;
 }
 
 form select {
   width: 100%;
-  padding: 8px 12px;
-  border: 1px solid var(--brown);
-  border-radius: 4px;
+  padding: 10px;
+  border: 2px solid var(--brown);
+  border-radius: 8px;
   color: var(--brown);
+  background-color: white;
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
   font-size: 1rem;
+}
+
+#tags {
   height: 100px;
 }
 
@@ -384,6 +397,10 @@ form select:focus, form input:focus {
 }
 
 form label {
+  display:block;
+  border-radius: 8px;
+  padding: 0 0 10px 0;
+  background-color: white ;
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
   color: var(--brown);

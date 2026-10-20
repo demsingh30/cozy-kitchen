@@ -5,3 +5,7 @@ yes.addEventListener ('click' , function () {
     submitForm.classList.remove('hidden')
 })
 
+submitForm.addEventListener('submit' , function (event) {
+    event.preventDefault()
+     console.log('submit fired')
+})
