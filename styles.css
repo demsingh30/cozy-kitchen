@@ -84,6 +84,20 @@ button a {
 
 button a:hover {
   color:var(--sage);
+
+}
+
+
+#open-form,
+.search-button button,
+.nav-button {
+  transition: background-color .2s ease;;
+}
+
+#open-form:hover,
+.search-button button:hover,
+.nav-button:hover {
+ background-color: #D98A94;
 }
 
 header {
@@ -377,8 +391,9 @@ form label {
 }
 
 input[type="submit"] {
+  color: var(--cream);
   background-color: var(--blush);
-  color: var(--linen);
+  transition: transform .2s ease, background-color .2s ease;
   border-radius: 8px;
   border: none;
   width: 200px;
@@ -391,7 +406,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  color: var(--sage);
+  background-color: #D98A94;
+  cursor: pointer;
 }
 
 #friends-picks {
@@ -408,6 +424,12 @@ footer {
   color: var(--linen);
   padding: 20px;
 }
+
+
+
+
+
+
 
 @media only screen and (max-width:600px) {
 nav {
