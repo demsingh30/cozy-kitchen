@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Cozy Kitchen</title>
   </head>
-
+ 
 <body>
-
+ 
   <!-- Navigation -->
 <header id="header">
  <img id="header-img" src="logo.svg" alt="The Cozy Kitchen Logo">
@@ -22,8 +22,8 @@
   </ul>
   </nav>
 </header>
-
-
+ 
+ 
 <!-- Hero Section -->
 <section class="hero">
   <p id="hero-p">A collection of my favorite recipes</p>
@@ -38,33 +38,42 @@
  <button type="button" onclick="document.querySelector('#Recipes').scrollIntoView()">Browse Recipes</button>
 </div>
 </section>
-
  
-
+ 
+ 
 <div class="stamp-divider">
     <span>✦</span>
     </div>
-
-
+ 
+ 
 <section id="Recipes">
-
+ 
   <!--Tagging System-->
 <section id="tag-pills">
-  <div class="pill-tags">
-    <span class="pill tag-asian">Asian</span>
-    <span class="pill tag-easy">Easy</span>
-    <span class="pill tag-one-pot">One Pot</span>
-    <span class="pill tag-quick">Quick</span>
-    <span class="pill tag-airfryer">Airfryer</span>
-    <span class="pill tag-dessert">Dessert</span>
-    <span class="pill tag-breakfast">Breakfast</span>
+  <div id="filter-bar">
+    <button type="button" id="open-filters">Filters</button>
+ 
+    <div id="quick-tags">
+      <button type="button" class="quick-pill" data-tag="quick">Quick</button>
+      <button type="button" class="quick-pill" data-tag="easy">Easy</button>
+      <button type="button" class="quick-pill" data-tag="dinner">Dinner</button>
+      <button type="button" class="quick-pill" data-tag="dessert">Dessert</button>
+      <button type="button" class="quick-pill" data-tag="vegetarian">Vegetarian</button>
+      <button type="button" class="quick-pill" data-tag="chicken">Chicken</button>
+      <button type="button" class="quick-pill" data-tag="airfryer">Airfryer</button>
+      <button type="button" class="quick-pill" data-tag="comfort-food">Comfort Food</button>
+    </div>
   </div>
+ 
+  <div id="filter-panel" class="hidden"></div>
+  <div id="active-filters"></div>
+  <p id="result-count"></p>
 </section>
-
+ 
   <h2>Recipes</h2>
-
+ 
   <div class="recipe-grid">
-
+ 
     <!-- Card 1 -->
     <article class="recipe-card">
       <div class="tape"></div>
@@ -76,11 +85,11 @@
   </svg>
     </button>
   </div>
-
+ 
       <h3>Miso Butter Salmon Rice</h3>
       <p>Salty-sweet salmon over buttery miso rice. <a href="https://www.tiktok.com/@ivyskitchn/video/7650600782579911966" target="_blank">View Original</a> </p>
-
-
+ 
+ 
       
       <div class="tag">
         <span class="timer">
@@ -90,22 +99,22 @@
 </svg>30 Min</span>
       
       </div>
-
+ 
     </article>
-
+ 
   </div>   <!-- closes the grid -->
  </section>   <!-- closes Recipes -->
  
-
-
-
+ 
+ 
+ 
  <!-- Friend's Picks -->
 <section id="friends-picks">
   <h2>Friends' Picks</h2>
   <p>The ones my people keep coming back for</p>
-
+ 
   <div class="picks-row">
-
+ 
     <div class="pick-card">
       <div class="pick-circle">P</div>
       <div class="pick-text">
@@ -114,7 +123,7 @@
         <p>"Made it three weekends in a row now."</p>
       </div>
     </div>
-
+ 
     <div class="pick-card">
       <div class="pick-circle">J</div>
       <div class="pick-text">
@@ -123,7 +132,7 @@
         <p>"The brown butter is non-negotiable now."</p>
       </div>
     </div>
-
+ 
     <div class="pick-card">
       <div class="pick-circle">K</div>
       <div class="pick-text">
@@ -132,66 +141,65 @@
         <p>"Requests this every time tomatoes are in season."</p>
       </div>
     </div>
-
+ 
   </div>
 </section>
-  <!-- Submit A Recipe  -->
- <section id="submit-recipe">
+  <!-- Submit A Recipe -->
+  <section id="submit-recipe">
     <h2>Want To Submit A Recipe?</h2>
     <button id="open-form">Yes!</button>
-
-    <!-- Form -->
-<div id="submit-form" class="hidden">
-  <form>
-<div>
-<label for="title">Recipe Title:</label>
-<input type="text" id="title" name="title">
-</div>
-<div>
-<label for="photo">Submit Your Photo:</label>
-<input type="file" id="photo" name="photo">
-</div>
-<div>
-<label for="link">Submit Your URL:</label>
-<input type="url" id="link" name="link">
-</div>
-
-
-<div>
-<label for="selection">Cuisine Type:</label>
-<select id="selection" name="selection">
-    <option value="asian">Asian</option>
-    <option value="mexican">Mexican</option>
-    <option value="italian">Italian</option>
-    <option value="american">American</option>
-    <option value="indian">Indian</option>
-</select>
-</div>
-
-<div>
-<label for="tags">Other Tags:</label>
-<select id="tags" name="tags" multiple>
-    <option value="quick">Quick Meals</option>
-    <option value="easy">Easy</option>
-    <option value="airfryer">Airfryer</option>
-    <option value="dessert">Dessert</option>
-    <option value="healthy">Healthy</option>
-    <option value="one-pot">One Pot</option>
-  </select>
-  </div>
-  
-  <input type="submit" value="Submit Recipe">
-  
-  </form>
-  </div>
-
- </section>
-
+ 
+    <div id="submit-form" class="hidden">
+      <form>
+        <div>
+          <label for="title">Recipe Title <span class="req">*</span></label>
+          <input type="text" id="title" name="title" required>
+        </div>
+ 
+        <div>
+          <label for="link">Recipe Link <span class="req">*</span></label>
+          <input type="url" id="link" name="link" placeholder="https://..." required>
+          <small class="helper">Where can we find the recipe?</small>
+        </div>
+ 
+        <div>
+          <label for="selection">Cuisine Type <span class="req">*</span></label>
+          <select id="selection" name="selection" required>
+            <option value="" disabled selected>Choose one</option>
+          </select>
+        </div>
+ 
+        <fieldset class="tag-group">
+          <legend>Tags (optional)</legend>
+          <div id="form-tags"></div>
+        </fieldset>
+ 
+        <div>
+          <label for="photo">Photo (optional)</label>
+          <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+ 
+        <div>
+          <label for="name">Your Name (optional)</label>
+          <input type="text" id="name" name="name">
+        </div>
+ 
+        <input type="submit" value="Submit Recipe">
+      </form>
+    </div>
+ 
+    <div id="thank-you" class="hidden">
+      <h3>Thanks! 🍳</h3>
+      <p>Your recipe is on its way.</p>
+      <button id="submit-another">Submit another</button>
+    </div>
+  </section>
+ 
 <!--  Footer -->
  <footer>
   <p> 🌱 The Cozy Kitchen 🌱</p>
   <p>&copy;  2026 The Cozy Kitchen. All rights reserved.</p>
  </footer>
 </body>
-
+ 
 </html>

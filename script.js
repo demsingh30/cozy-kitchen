@@ -1,5 +1,8 @@
 const yes = document.querySelector('#open-form')
 const submitForm = document.querySelector('#submit-form')
+const thankYou = document.querySelector('#thank-you')
+const submitAnother = document.querySelector('#submit-another')
+const resetForm = document.querySelector('form')
 
 yes.addEventListener ('click' , function () {
     submitForm.classList.remove('hidden')
@@ -7,5 +10,12 @@ yes.addEventListener ('click' , function () {
 
 submitForm.addEventListener('submit' , function (event) {
     event.preventDefault()
-     console.log('submit fired')
+    submitForm.classList.add('hidden')
+    thankYou.classList.remove('hidden')
+})
+
+submitAnother.addEventListener('click' , function () {
+    resetForm.reset()
+    submitForm.classList.remove('hidden')
+    thankYou.classList.add('hidden')
 })
